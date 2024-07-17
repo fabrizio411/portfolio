@@ -11,6 +11,18 @@ const config: Config = {
     extend: {
       width: {
         'menu': 'calc(100vw - 1rem)'
+      },
+      colors: {
+        'bg': '#F9F8FA',
+        'text-1': '#333333',
+        'text-2': '#5e5e5e',
+        'primary': '#7843e9',
+        'secondary': '#b6aacf',
+        'accent': '#937fbd',
+
+        'dark-bg': '#171717',
+        'dark-text-1': '#fafafa',
+        'dark-text-2': '#a9adb3',
       }
     },
   },

@@ -3,7 +3,7 @@
 import { ComponentProps, useEffect, useState } from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
 
-const ThemeChange = ({ className }: ComponentProps<'div'>) => {
+const ThemeChange = ({ className, ...props }: ComponentProps<'div'>) => {
   const [darkTheme, setDarkTheme] = useState<boolean>(false)
 
   const changeTheme = () => {
@@ -23,11 +23,11 @@ const ThemeChange = ({ className }: ComponentProps<'div'>) => {
   }, [darkTheme])
 
   return (
-    <div onClick={changeTheme}>
+    <div onClick={changeTheme} className={className} {...props}>
       {darkTheme ? 
-        <FaMoon className='w-6 h-6 fill-white' />
+        <FaMoon className='w-8 h-8 p-1 fill-dark-text-1' />
       :
-        <FaSun className='w-6 h-6 fill-black' />      
+        <FaSun className='w-8 h-8 p-1 fill-text-1' />      
       }
     </div>
   )
