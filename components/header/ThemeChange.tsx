@@ -13,7 +13,6 @@ const ThemeChange = ({ className, ...props }: ComponentProps<'div'>) => {
   useEffect(() => {
     const htmlRef = document.querySelector('html')
     if (htmlRef) {
-      console.log('first')
       if (darkTheme) {
         htmlRef.classList.add('dark')
       } else {
