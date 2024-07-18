@@ -22,4 +22,19 @@
     absolute
     pos-center
   }
+
+  .link-btn {
+    @apply
+    bg-secondary
+    dark:bg-accent
+    text-text-1
+    dark:text-dark-text-1
+    px-8
+    py-3
+    rounded-md
+    hover:bg-secondary/75
+    dark:hover:bg-accent/75
+    text-lg
+    font-bold
+  }
 }
