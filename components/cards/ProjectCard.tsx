@@ -4,7 +4,6 @@ import React from 'react'
 import { IoMdLink } from 'react-icons/io';
 import { SiNextdotjs } from 'react-icons/si';
 import Tooltip from '../Tooltip';
-import { RiTriangleFill } from 'react-icons/ri';
 
 interface ProjectCardProps {
   project: {
@@ -23,12 +22,12 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <article className='flex flex-col md:flex-row gap-3 md:gap-6'>
-      <Link href={project.liveURL} target='_blank' className='group relative w-full md:w-1/2 aspect-video rounded-xl bg-zinc-300 dark:bg-zinc-700 overflow-hidden'>
+      <Link href={project.liveURL} target='_blank' className='group relative w-full md:w-[400px] aspect-video rounded-xl bg-zinc-300 dark:bg-zinc-700 overflow-hidden'>
         <div className='relative top-6 left-6 group-hover:top-5 group-hover:left-5 transition-all w-full h-full'>
           <Image className='rounded-xl' alt='imagen del proyecto' src={project.imgURL} fill />
         </div>
       </Link>
-      <div className='flex flex-col justify-center gap-4'>
+      <div className='flex flex-col justify-center gap-2 flex-1'>
         <h3 className='text-2xl font-semibold '>{project.title}</h3>
         <p className='text-text-2 dark:text-dark-text-2 text-lg w-11/12'>{project.description}</p>
         <div className='flex items-center gap-2'>
@@ -36,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <ToolCard key={tool.tooltip} tool={tool} />
           ))}
         </div>
-        <div className='flex gap-2'>
+        <div className='flex gap-2 mt-2'>
           <Link className='link-btn' href={project.codeURL} target='_blank'>Repo</Link>
           <Link className='link-btn flex items-center gap-3' href={project.liveURL} target='_blank'>
             <p>Live</p>

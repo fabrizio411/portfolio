@@ -17,10 +17,14 @@ const config: Config = {
         'text-1': '#333333',
         'text-2': '#535353',
         'primary': '#7843e9',
-        'secondary': '#b6aacf',
-        'accent': '#937fbd',
+        'secondary': '#cbfaed',
+        'accent': '#18a982',
+        // 'secondary': '#b6aacf',
+        // 'accent': '#937fbd',
 
         'dark-bg': '#171717',
+        // 'dark-text-1': '#fafafa',
+        // 'dark-text-2': '#a9adb3',
         'dark-text-1': '#fafafa',
         'dark-text-2': '#a9adb3',
       }

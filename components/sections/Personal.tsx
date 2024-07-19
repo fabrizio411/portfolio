@@ -1,5 +1,7 @@
 import React from 'react'
 import Profile from '../header/Profile'
+import Link from 'next/link'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Personal = () => {
   return (
@@ -8,6 +10,14 @@ const Personal = () => {
       <div className='text-center md:text-start'>
         <h2 className='text-2xl md:text-4xl font-bold'>Fabrizio Mourglia</h2>
         <p className='md:text-xl md:mt-2 dark:text-dark-text-2'>Desarrollador web orientado a Frontend</p>
+        <div className='flex gap-4 mt-3'>
+          <Link href={'https://www.linkedin.com/in/fabrizio-mourglia-4a7427276/'} target='_blank'>
+            <FaLinkedin className='w-8 h-8 fill-text-1 dark:fill-dark-text-1' />
+          </Link>
+          <Link href={'https://github.com/fabrizio411'} target='_blank'>
+            <FaGithub className='w-8 h-8 fill-text-1 dark:fill-dark-text-1' />
+          </Link>
+        </div>
       </div>
     </section>
   )
