@@ -1,4 +1,5 @@
 import About from '@/components/sections/About'
+import Contacto from '@/components/sections/Contacto'
 import Personal from '@/components/sections/Personal'
 import Projects from '@/components/sections/Projects'
 import React from 'react'
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Personal />
       <About />
       <Projects />
+      <Contacto />
     </main>
   )
 }

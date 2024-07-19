@@ -1,7 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
+import { IoMdLink } from 'react-icons/io';
 import { SiNextdotjs } from 'react-icons/si';
+import Tooltip from '../Tooltip';
+import { RiTriangleFill } from 'react-icons/ri';
 
 interface ProjectCardProps {
   project: {
@@ -30,12 +33,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <p className='text-text-2 dark:text-dark-text-2 text-lg w-11/12'>{project.description}</p>
         <div className='flex items-center gap-2'>
           {project.tools.map(tool => (
-            <ToolCard tool={tool} />
+            <ToolCard key={tool.tooltip} tool={tool} />
           ))}
         </div>
         <div className='flex gap-2'>
           <Link className='link-btn' href={project.codeURL} target='_blank'>Repo</Link>
-          <Link className='link-btn' href={project.liveURL} target='_blank'>Live</Link>
+          <Link className='link-btn flex items-center gap-3' href={project.liveURL} target='_blank'>
+            <p>Live</p>
+            <IoMdLink className='w-6 h-6 fill-text-1 dark:fill-dark-text-1' /> 
+          </Link>
         </div>
       </div>
     </article>
@@ -53,17 +59,17 @@ interface ToolCardProps {
 }
 
 const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
+
+
   return (
-    <div className='h-8 w-8 relative group'>
-      {tool.tooltip === 'NextJs' ? (
-        <SiNextdotjs className='fill-black dark:fill-dark-text-1 w-full h-full' />
-      ) : (
-        <Image alt='tool imagen' src={tool.iconURL} fill />
-      )}
-      
-      <p className='absolute hidden group-hover:block px-2 py-1 bottom-[110%] left-1/2 -translate-x-1/2 bg-black rounded-md text-dark-text-1'>
-        {tool.tooltip}
-      </p>
-    </div>
+    <Tooltip label={tool.tooltip}>
+      <div className='w-8 h-8'>
+        {tool.tooltip === 'NextJs' ? (
+          <SiNextdotjs className='fill-black dark:fill-dark-text-1 w-full h-full' />
+        ) : (
+          <Image alt='tool imagen w-full h-full' src={tool.iconURL} fill />
+        )}
+      </div>
+    </Tooltip>
   )
 }

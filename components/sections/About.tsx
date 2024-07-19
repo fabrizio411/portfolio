@@ -6,7 +6,7 @@ const About = () => {
 
   const skills = ['Inglés', 'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind', 'Node', 'Git', 'Responsive Design']
   return (
-    <section className='mt-12 flex flex-col gap-12 md:flex-row'>
+    <section className='pt-24 flex flex-col gap-12 md:flex-row' id='about'>
       <div className='md:w-1/2'>
         <h2 className='text-3xl font-bold text-center'>Sobre mi</h2>
         <div className='mt-6 text-text-2 dark:text-dark-text-2'>
