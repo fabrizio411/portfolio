@@ -6,11 +6,13 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <main className='py-20 m-auto max-w-[900px] w-full px-8'>
-      <Personal />
-      <About />
-      <Projects />
-      <Contacto />
+    <main className='py-20 m-auto max-w-[900px] w-full'>
+      <div className='px-8 w-full'>
+        <Personal />
+        <About />
+        <Projects />
+        <Contacto />
+      </div>
     </main>
   )
 }

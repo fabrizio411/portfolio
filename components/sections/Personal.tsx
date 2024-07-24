@@ -10,7 +10,7 @@ const Personal = () => {
       <div className='text-center md:text-start'>
         <h2 className='text-2xl md:text-4xl font-bold'>Fabrizio Mourglia</h2>
         <p className='md:text-xl md:mt-2 dark:text-dark-text-2'>Desarrollador web orientado a Frontend</p>
-        <div className='flex gap-4 mt-3'>
+        <div className='flex justify-center md:justify-normal gap-4 mt-3'>
           <Link href={'https://www.linkedin.com/in/fabrizio-mourglia-4a7427276/'} target='_blank'>
             <FaLinkedin className='w-8 h-8 fill-text-1 dark:fill-dark-text-1' />
           </Link>
