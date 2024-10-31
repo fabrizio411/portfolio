@@ -15,7 +15,7 @@ const Profile: React.FC<ProfileProps & ComponentProps<'div'>> = ({ big, classNam
         className
       )} {...props}>
         <div className='absolute w-full h-full pos-center bg-zinc-300 dark:bg-zinc-800' />
-        <Image alt='foto' src={'/foto.png'} fill />
+        <Image alt='foto' src={'/foto.jpg'} fill />
       </div>
     </div>
   )
