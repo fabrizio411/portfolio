@@ -4,7 +4,7 @@ const About = () => {
   const birthdate = new Date('11-4-2002')
   const age = getYearsDelta(birthdate, new Date())
 
-  const skills = ['Inglés', 'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind', 'Node', 'Git', 'Responsive Design']
+  const skills = ['Inglés', 'HTML', 'CSS', 'JavaScript', 'React', 'Tailwind', 'Node', 'Git', 'Responsive Design', 'MongoDB', 'SQL']
   return (
     <section className='pt-24 flex flex-col gap-12 md:flex-row' id='about'>
       <div className='md:w-1/2'>
