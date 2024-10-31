@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={twMerge(
         inter.className,
-        'bg-bg dark:bg-dark-bg text-text-1 dark:text-dark-text-1 transition-colors'
+        'bg-bg dark:bg-dark-bg text-text-1 dark:text-dark-text-1 transition-colors scroll-smooth'
       )}>
         <Header />
         {children}
